@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作DOM节点</title>
+    <script type="text/javascript">
+        function modify(){
+            document.getElementById("txt").innerHTML="用户名:";
+            document.getElementById("userName").value = "java";
+            document.getElementById("userName").style.color="red";
+        }
+
+        function add(){
+            var p=document.createElement("p");
+            var node1=document.createTextNode("...前...");
+            p.appendChild(node1);
+            var p2=document.createElement("p");
+            var node2=document.createTextNode("...后...");
+            p2.appendChild(node2);
+            var parent=document.getElementById("parent");
+            var son=document.getElementById("son");
+            parent.insertBefore(p,son);
+            parent.appendChild(p2);
+        }
+
+        // function remove(){
+        //     var parent=document.getElementById("parent");
+        //     var son=document.getElementById("son");
+        //     parent.removeChild(son);
+        // }
+    </script>
+</head>
+<body>
+<div id="parent">
+    <div id="son">
+        <font id="txt">:</font><input type="text " id="userName" name="userName"/>
+    </div>
+</div>
+<input type="button" value="修改DOM节点" onclick="modify()"/>
+<input type="button" value="添加DOM节点" onclick="add()"/>
+<input type="button" value="删除DOM节点" onclick="remove()"/>
+</body>
+</html>

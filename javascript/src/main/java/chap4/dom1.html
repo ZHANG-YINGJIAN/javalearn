@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript对象</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+    function funk(some){
+        alert(some);
+    }
+
+    var p = new Object();
+    p.name = "java";
+    p.param=funk;
+    alert(p.name);
+    p.param("javascript");
+    // delete p.name;
+    // alert(p.name);
+    // delete p.param;
+    // p.param("javascript"); 删除
+    p.name=undefined;
+    p.param=undefined;
+    alert(p.name);
+    p.param("javascript");
+*/
+    /*构造
+    function person(name,age) {
+        this.name=name;
+        this.age=age;
+    }
+
+    var p1=new person("java",23);
+    alert(p1.name);*/
+
+    //方法
+    var s1 = "实例化字符串abc方式";
+    document.write(s1.indexOf("ab",0)+"<br/>");//字母指定位置
+
+        //数组
+
+    var arr2 = new Array();
+    arr2[0]=3;
+    arr2[1]=6;
+    arr2[2]=5;
+
+    var o;
+    for(o in arr2) {
+        document.write(o+" "+arr2[o]+"<br/>");
+    }
+</script>
+</body>
+</html>

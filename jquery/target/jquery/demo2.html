@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+/*          var li2=$("ul li:eq(1)");
+          var li2_txt=li2.text();
+          alert(li2_txt);*/
+            //创建节点
+/*            var li1=$("<li title='马化腾'>马化腾</li>");
+            var li2=$("<li title='李彦宏'>李彦宏</li>");
+            $("ul").append(li1);
+            var li22=$("ul li:eq(1)");
+            li2.insertAfter(li22);*/
+            //删除节点
+            //$("ul li:eq(1)").remove();
+
+            //操作DOM属性
+            //获取属性
+/*            var li2=$("ul li:eq(1)");
+            var li2_attr = li2.attr("title");
+            alert(li2_attr);*/
+
+            //设置属性
+            //$("ul li:eq(1)").attr("title","你懂的");
+            //删除属性
+           // $("ul li:eq(1)").removeAttr("title");
+
+            //操作DOM节点样式
+            //获取样式
+/*            var li2=$("ul li:eq(1)");
+            var li2_class = li2.attr("class");
+            alert(li2_class);*/
+            //设置样式
+//            $("ul li:eq(1)").attr("class","lc2");
+            //追加样式
+//            $("ul li:eq(1)").addClass("lc3");
+            //移除样式
+ //           $("ul li:eq(1)").removeClass("lc");
+
+            //设置和获取HTML，文本和值
+            //获取HTML
+/*            var li2=$("ul li:eq(0)");
+            var li2_HTML = li2.html();
+            alert(li2_HTML);*/
+
+            //设置HTML
+     //       $("ul li:eq(0)").html("<font color='blue'>哈哈</font>")
+             //获取文本
+/*            var li2_text = $("ul li:eq(1)").text();
+            alert(li2_text);*/
+            //设置文本
+            // $("ul li:eq(0)").text("hehe");
+
+            //遍历节点
+/*            var b = $("body").children();
+            alert(b.length);
+            var u = $("ul").children();
+            alert(u.length);
+
+            for(var i = 0;i<u.length;i++) {
+                //alert(u[i].html());//报错
+                alert($(u[i]).html());
+                //alert(u[i].innerHTML);
+            }*/
+
+            //next()
+            var l=$("ul li:eq(0)").next();
+            alert(l.html());
+            var l1=$("ul li:eq(1)").prev();
+            alert(l1.html());
+
+
+        });
+
+        function getUserName(){
+            var userName=$("#userName").val();
+            alert(userName);
+        }
+
+        function setUserName(){
+            $("#userName").val('你好');
+        }
+    </script>
+
+    <style type="text/css">
+        .lc{
+            background-color: red;
+        }
+
+        .lc2{
+            background-color: blue;
+        }
+
+        .lc3{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<p>你最喜欢的名人是？</p>
+<ul>
+    <li title="这是乔布斯"><font color="green">乔布斯</font></li>
+    <li title="这是比尔盖茨" class="lc">比尔盖茨</li>
+    <li title="这是詹姆斯高斯林">詹姆斯高斯林</li>
+</ul>
+<input type="text" id="userName" />
+<input type="button" value="获取数据" onclick="getUserName()"/>
+<input type="button" value="设置数据" onclick="setUserName()"/>
+</body>
+</html>

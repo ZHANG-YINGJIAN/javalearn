@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //基本选择器
+  //          $("#a1").css("background-color","red");//id选择器
+ //           $(".c1").css("background-color","red");//样式类别选择器
+ //           $("a").css("background-color","red");//标签选择器
+
+            //属性选择器
+//            $("[href]").css("background-color","red");
+//            $("[href='#']").css("background-color","red");
+            $("[href$='com']").css("background-color","red");
+//            $("ul li:first").css("background-color", "red");
+
+        });
+        //基本选择器
+    </script>
+
+    <style type="text/css">
+        .c1{
+            font-size:40px;
+        }
+    </style>
+</head>
+<body>
+<p class="c1">Jquery选择器</p>
+<ul>
+    <li id="i1"><a id="a1" class="c1" href="http://www.java1234.com">java分享网</a></li>
+    <li><a id="a2" class="c1" href="http://www.csdn.net">CSDN</a></li>
+    <li><a href="http://www.iteye.com">iteye</a></li>
+    <li><a href="http://www.cnblongs.com">博客园</a></li>
+    <li><a class="c1" href="#">百度</a></li>
+    <li><a href="http://www.google.com">谷歌</a></li>
+</ul>
+</body>
+</html>

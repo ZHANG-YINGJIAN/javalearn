@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>层叠特性</title>
+    <style type="text/css">
+        /*
+        行内样式>ID样式>类别样式>标记样式
+         */
+        /*
+        类别
+         */
+        p{
+            color: green;
+        }
+        /*
+        标记
+         */
+        .red{
+            color: red;
+        }
+        /*
+        ID
+         */
+        #p3{
+            color: aqua;
+        }
+
+    </style>
+</head>
+
+<body>
+<p id="p1">第一行</p>
+<p id="p2" class="red">第二行</p>
+<p id="p3" class="red">第三行</p>
+<p style="color: yellow" class="red" id="p3">第四行</p>
+</body>
+
+</html>

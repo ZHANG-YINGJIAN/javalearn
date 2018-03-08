@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#b1").click(function () {
+                $("#p1").show();
+            });
+
+            $("#b2").click(function () {
+                $("#p1").hide();
+            });
+
+            $("#b3").click(function () {
+                $("#d1").fadeIn();
+            });
+
+            $("#b4").click(function () {
+                $("#d1").fadeOut();
+            });
+
+            $("#b5").click(function () {
+                $("#d1").fadeToggle(10000);
+            });
+
+            $("#b6").click(function () {
+                $("#d1").fadeTo("slow",0.1);
+                $("#d2").fadeTo("slow",0.5);
+                $("#d3").fadeTo("slow",0.9);
+            });
+
+            $("#b7").click(function () {
+                $("#d4").slideDown();
+            });
+
+            $("#b8").click(function () {
+                $("#d4").slideUp(1);
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" id="b1" value="出来"/>
+<input type="button" id="b2" value="滚"/>
+<p id="p1">小日本</p>
+<hr/>
+<input type="button" id="b3" value="淡入"/>
+<input type="button" id="b4" value="淡出"/>
+<input type="button" id="b5" value="淡入淡出开关"/>
+<input type="button" id="b6" value="透明度"/>
+<div id="d1" style="width: 100px;height:100px;background-color:red;margin:10px"></div>
+<div id="d2" style="width: 100px;height:100px;background-color:green;margin:10px"></div>
+<div id="d3" style="width: 100px;height:100px;background-color:blue;margin:10px"></div>
+<hr/>
+<input type="button" id="b7" value="向下滑动"/>
+<input type="button" id="b8" value="向上滑动"/>
+<div id="d4" style="width: 500px;height:100px;background-color:gray;display: none">
+    <p>java1234</p>
+    <p>java1234hahahah</p>
+</div>
+</body>
+</html>

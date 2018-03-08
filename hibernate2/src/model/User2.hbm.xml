@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="model">
+
+    <class name="User" table="t_user">
+        <id name="id" column="userId">
+            <generator class="native"></generator>
+        </id>
+
+        <property name="name" column="userName"></property>
+
+        <one-to-one name="address" class="model.Address" cascade="all"></one-to-one>
+    </class>
+
+</hibernate-mapping>

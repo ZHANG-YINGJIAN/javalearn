@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="model">
+
+    <class name="Address2" table="t_address2">
+        <id name="id" column="addressId">
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property name="address" column="address"></property>
+        <property name="zipcode" column="zipcode"></property>
+
+        <one-to-one name="user" class="model.User2" property-ref="address"></one-to-one>
+    </class>
+
+</hibernate-mapping>

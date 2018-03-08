@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript全局函数</title>
+</head>
+<body>
+<script type="text/javascript">
+    //7个全局函数escape( )、eval( )、isFinite( )、
+    // isNaN( )、parseFloat( )、parseInt( )、unescape( )
+/*    var str="1+2+3";
+    alert(eval(str));//主要执行字符串，将结果转为数字
+    alert(str);
+
+    //isNaN: 是不是一个数字。返回TRUE不是数字
+    var a = 100 ;
+    if(isNaN(a)){
+        alert("不是数字") ;
+    }else
+        alert("是数字") ;   //其结果为“是数字”，对于字符串，其比较的是字符串里边的内容，
+
+    alert("3" + "2");  //结果为32
+    alert(eval("3") + eval("2")) ;  //结果为5
+
+    var b = "中国" ;
+    var c = escape(b) ;   //对字符串进行编码
+    alert(c) ;
+    alert(unescape(c)) ;  //对由 escape() 编码的字符串进行解码
+
+    var e = "http://www.sohu.com?a=中国&b=美国" ;
+    var f = encodeURI(e) ;   //把字符串编码为URI
+    alert(f) ;
+    alert(decodeURI(f)) ;    //解码某个编码的URI
+*/
+    var str = "100";
+    alert(parseInt(str,2));
+
+
+</script>
+
+</body>
+</html>
